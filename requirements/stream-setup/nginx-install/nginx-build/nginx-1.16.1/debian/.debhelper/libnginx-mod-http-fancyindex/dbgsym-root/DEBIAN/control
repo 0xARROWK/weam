@@ -1,0 +1,13 @@
+Package: libnginx-mod-http-fancyindex-dbgsym
+Package-Type: ddeb
+Source: nginx
+Version: 1.16.1-0+bionic1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 66
+Depends: libnginx-mod-http-fancyindex (= 1.16.1-0+bionic1)
+Section: debug
+Priority: optional
+Description: debug symbols for libnginx-mod-http-fancyindex
+Build-Ids: 4de658787c764e30df272e72305fa8a98355757b

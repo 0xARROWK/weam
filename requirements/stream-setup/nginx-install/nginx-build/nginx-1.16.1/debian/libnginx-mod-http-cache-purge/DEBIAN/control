@@ -1,0 +1,14 @@
+Package: libnginx-mod-http-cache-purge
+Source: nginx
+Version: 1.16.1-0+bionic1
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 64
+Depends: nginx-common (= 1.16.1-0+bionic1), libc6 (>= 2.14)
+Section: httpd
+Priority: optional
+Homepage: http://nginx.net
+Description: Purge content from Nginx caches
+ Cache Purge module adds purging capabilities to Nginx. It allows purging
+ content from caches used by all of Nginx proxy modules, like FastCGI, Proxy,
+ SCGI and uWSGI.

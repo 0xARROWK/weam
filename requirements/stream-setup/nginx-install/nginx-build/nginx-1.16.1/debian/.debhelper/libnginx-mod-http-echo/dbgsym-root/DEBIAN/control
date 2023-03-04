@@ -1,0 +1,13 @@
+Package: libnginx-mod-http-echo-dbgsym
+Package-Type: ddeb
+Source: nginx
+Version: 1.16.1-0+bionic1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 202
+Depends: libnginx-mod-http-echo (= 1.16.1-0+bionic1)
+Section: debug
+Priority: optional
+Description: debug symbols for libnginx-mod-http-echo
+Build-Ids: 4144cc03c75825a82b423b77dc884e03aef9c16c

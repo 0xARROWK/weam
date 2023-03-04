@@ -1,0 +1,13 @@
+Package: libnginx-mod-http-upstream-fair-dbgsym
+Package-Type: ddeb
+Source: nginx
+Version: 1.16.1-0+bionic1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 61
+Depends: libnginx-mod-http-upstream-fair (= 1.16.1-0+bionic1)
+Section: debug
+Priority: optional
+Description: debug symbols for libnginx-mod-http-upstream-fair
+Build-Ids: b28d00bead10b01bf0fe8a0ccac852a0a207844c

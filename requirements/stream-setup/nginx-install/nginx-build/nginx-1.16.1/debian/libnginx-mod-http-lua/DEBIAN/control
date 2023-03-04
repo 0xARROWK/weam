@@ -1,0 +1,17 @@
+Package: libnginx-mod-http-lua
+Source: nginx
+Version: 1.16.1-0+bionic1
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 449
+Depends: libnginx-mod-http-ndk (= 1.16.1-0+bionic1), nginx-common (= 1.16.1-0+bionic1), libc6 (>= 2.14), libluajit-5.1-2 (>= 2.0.4+dfsg)
+Section: httpd
+Priority: optional
+Homepage: http://nginx.net
+Description: Lua module for Nginx
+ Embed Lua runtime into nginx.
+ .
+ This module embeds Lua, via the standard Lua 5.1 interpreter or LuaJIT
+ 2.0/2.1, into Nginx and by leveraging Nginx's subrequests, allows the
+ integration of the powerful Lua threads (Lua coroutines) into the Nginx event
+ model.

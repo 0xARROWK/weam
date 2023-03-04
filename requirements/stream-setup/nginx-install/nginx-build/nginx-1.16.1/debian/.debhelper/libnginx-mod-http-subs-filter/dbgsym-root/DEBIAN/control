@@ -1,0 +1,13 @@
+Package: libnginx-mod-http-subs-filter-dbgsym
+Package-Type: ddeb
+Source: nginx
+Version: 1.16.1-0+bionic1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 59
+Depends: libnginx-mod-http-subs-filter (= 1.16.1-0+bionic1)
+Section: debug
+Priority: optional
+Description: debug symbols for libnginx-mod-http-subs-filter
+Build-Ids: a9decf01648d3ad8d4d10f8b897b53c50882abc7

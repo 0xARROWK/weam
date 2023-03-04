@@ -1,0 +1,15 @@
+Package: nginx-extras-dbgsym
+Package-Type: ddeb
+Source: nginx
+Version: 1.16.1-0+bionic1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 2505
+Depends: nginx-extras (= 1.16.1-0+bionic1)
+Breaks: nginx-extras-dbg (<< 1.10.1-3~)
+Replaces: nginx-extras-dbg (<< 1.10.1-3~)
+Section: debug
+Priority: optional
+Description: debug symbols for nginx-extras
+Build-Ids: 60608e1b19eb0331199d999f93adbaff05be2064

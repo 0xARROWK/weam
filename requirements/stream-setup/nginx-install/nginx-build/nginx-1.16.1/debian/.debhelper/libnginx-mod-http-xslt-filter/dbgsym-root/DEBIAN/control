@@ -1,0 +1,13 @@
+Package: libnginx-mod-http-xslt-filter-dbgsym
+Package-Type: ddeb
+Source: nginx
+Version: 1.16.1-0+bionic1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 73
+Depends: libnginx-mod-http-xslt-filter (= 1.16.1-0+bionic1)
+Section: debug
+Priority: optional
+Description: debug symbols for libnginx-mod-http-xslt-filter
+Build-Ids: 5265e9ebc9f7062ec6e8dd92b9af1fc4f3e10d15

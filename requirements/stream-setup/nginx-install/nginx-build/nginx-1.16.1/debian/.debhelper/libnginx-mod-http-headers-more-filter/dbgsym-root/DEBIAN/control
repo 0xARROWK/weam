@@ -1,0 +1,13 @@
+Package: libnginx-mod-http-headers-more-filter-dbgsym
+Package-Type: ddeb
+Source: nginx
+Version: 1.16.1-0+bionic1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 119
+Depends: libnginx-mod-http-headers-more-filter (= 1.16.1-0+bionic1)
+Section: debug
+Priority: optional
+Description: debug symbols for libnginx-mod-http-headers-more-filter
+Build-Ids: 4e25ccda70a1bd6b48fb1cb6db5be77e6f01ebe9

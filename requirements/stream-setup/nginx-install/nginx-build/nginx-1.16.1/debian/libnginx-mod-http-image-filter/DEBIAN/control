@@ -1,0 +1,16 @@
+Package: libnginx-mod-http-image-filter
+Source: nginx
+Version: 1.16.1-0+bionic1
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 68
+Depends: nginx-common (= 1.16.1-0+bionic1), libc6 (>= 2.14), libgd3 (>= 2.1.0~alpha~)
+Section: httpd
+Priority: optional
+Homepage: http://nginx.net
+Description: HTTP image filter module for Nginx
+ The ngx_http_image_filter module is a filter that transforms images in JPEG,
+ GIF, and PNG formats.
+ .
+ The module supports filters such as rotate, resize, crop, quality, sharpening,
+ interlacing and more.

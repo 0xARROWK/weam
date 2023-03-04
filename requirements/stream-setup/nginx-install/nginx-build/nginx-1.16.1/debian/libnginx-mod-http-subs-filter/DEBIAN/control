@@ -1,0 +1,15 @@
+Package: libnginx-mod-http-subs-filter
+Source: nginx
+Version: 1.16.1-0+bionic1
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 64
+Depends: nginx-common (= 1.16.1-0+bionic1), libc6 (>= 2.14)
+Section: httpd
+Priority: optional
+Homepage: http://nginx.net
+Description: Substitution filter module for Nginx
+ Subsitution Nginx module can do both regular expression and fixed string
+ substitutions on response bodies. The module is quite different from Nginx's
+ native Substitution module. It scans the output chains buffer and
+ matches string line by line, just like Apache's mod_substitute.

@@ -1,0 +1,15 @@
+6a35d7240f0011220c3ae328e9e0d5ec  usr/share/doc/nginx-doc/README
+78c79b4aee60c9fe9d233f29d58e7f26  usr/share/doc/nginx-doc/changelog.Debian.gz
+a3ca7af9f57003b84279a9112d5d8523  usr/share/doc/nginx-doc/copyright
+18a81e9bf1c26dcd5c288f88b4bda39e  usr/share/doc/nginx-doc/examples/drupal.gz
+3633cae8f81c512af759abd3c794d76e  usr/share/doc/nginx-doc/examples/http
+fb1535a59a853f05644b6dd1f31eb0b3  usr/share/doc/nginx-doc/examples/mail
+433143fa0db48488e67d1e7ddf41e6e9  usr/share/doc/nginx-doc/examples/mailman
+454e44ae3c97350e920bda6a47e909df  usr/share/doc/nginx-doc/examples/nginx.conf
+98b9f0f8021e3fdb4a588ddd006a1919  usr/share/doc/nginx-doc/examples/nginx_modsite.gz
+12d1a3c33cab8010400ec82029b14e70  usr/share/doc/nginx-doc/examples/virtual_hosts.gz
+5cad3c2cf2dd82e2b5812b76c99e2389  usr/share/doc/nginx-doc/examples/wordpress
+0459d8e5922313c462f6930b89b65478  usr/share/doc/nginx-doc/fcgiwrap
+58122636a2f1247664d98643227731f5  usr/share/doc/nginx-doc/php
+0a471c29ddd52a88efdabd5d6e09875d  usr/share/doc/nginx-doc/support-irc
+8448eaad2c10d4152e539c1ca784d59f  usr/share/doc/nginx-doc/upstream

@@ -1,0 +1,37 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+// Root variables
+
+:root {
+
+    // Principal theme (blue)
+
+    --theme-body: #edf2f7;
+    --theme-menu: #fff;
+    --theme-card: #fff;
+
+    --theme-text-color: #374151;
+
+    --theme-color: #7c3aed;
+    --theme-color-soft: #c4b5fd;
+
+    --btn-focus-ring-color: var(--theme-color);
+    --btn-focus-offset-ring-color: var(--theme-color-soft);
+
+    --primary-bg: #0f1629;
+    --primary-top-menu: #171e3b;
+    --primary-side-menu: #182246;
+    --primary-light-1: #3490dc;
+    --primary-light-2: rgba(52, 144, 220, 0.25);
+    --primary-light-3: rgba(52, 144, 220, 0.625);
+
+    // Fonts colors
+
+    --font-color-theme: #ddd;
+    --font-color-hover: #3490dc;
+
+}

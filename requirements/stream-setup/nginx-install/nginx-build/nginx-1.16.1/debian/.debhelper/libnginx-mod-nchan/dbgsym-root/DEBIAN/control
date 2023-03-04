@@ -1,0 +1,13 @@
+Package: libnginx-mod-nchan-dbgsym
+Package-Type: ddeb
+Source: nginx
+Version: 1.16.1-0+bionic1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 1176
+Depends: libnginx-mod-nchan (= 1.16.1-0+bionic1)
+Section: debug
+Priority: optional
+Description: debug symbols for libnginx-mod-nchan
+Build-Ids: 33bdde17cf2b07c3709c0932aa29847ecb1a918e

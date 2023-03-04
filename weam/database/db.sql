@@ -1,0 +1,5 @@
+DROP DATABASE weam;
+
+CREATE DATABASE weam;
+
+CREATE TABLE users();

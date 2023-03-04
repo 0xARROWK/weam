@@ -1,0 +1,153 @@
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+events {
+	worker_connections 768;
+	# multi_accept on;
+}
+
+http {
+
+	##
+	# Basic Settings
+	##
+
+	sendfile on;
+	tcp_nopush on;
+	tcp_nodelay on;
+	keepalive_timeout 65;
+	types_hash_max_size 2048;
+	client_max_body_size 25M;
+	# server_tokens off;
+
+	# server_names_hash_bucket_size 64;
+	# server_name_in_redirect off;
+
+	include /etc/nginx/mime.types;
+	default_type application/octet-stream;
+
+	##
+	# SSL Settings
+	##
+
+	ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE
+	ssl_prefer_server_ciphers on;
+
+	##
+	# Logging Settings
+	##
+
+	access_log /var/log/nginx/access.log;
+	error_log /var/log/nginx/error.log;
+
+	##
+	# Gzip Settings
+	##
+
+	gzip on;
+
+	# gzip_vary on;
+	# gzip_proxied any;
+	# gzip_comp_level 6;
+	# gzip_buffers 16 8k;
+	# gzip_http_version 1.1;
+	# gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+
+	##
+	# Virtual Host Configs
+	##
+
+	include /etc/nginx/conf.d/*.conf;
+	include /etc/nginx/sites-enabled/*;
+}
+
+rtmp {
+        server {
+                listen 1935;
+                chunk_size 4096;
+
+                application live {
+
+                        live on;
+                        on_publish http://localhost/test/backend/sec/live_auth.php;
+                        #exec ffmpeg -i rtmp://localhost/live/$name -vcodec libx264 -vprofile baseline -x264opts keyint=40 -acodec aac -strict -2 -f flv rtmp://localhost/hls/$name;
+			#live on;
+                        hls on;
+                        hls_path /tmp/hls/;
+                        hls_fragment 2s;
+                        hls_playlist_length 60s;
+
+			#exec_push /usr/bin/ffmpeg -f flv -analyzeduration 15000000 -probesize 200000 -i rtmp://localhost/live/test
+			#-vcodec libx264 -vprofile baseline -g 10 -vf scale=240:-2 -acodec aac -ar 44100 -ac 1 -f flv rtmp://localhost/hls_240/test
+			#-vcodec libx264 -vprofile baseline -g 10 -vf scale=360:-2 -acodec aac -ar 44100 -ac 1 -f flv rtmp://localhost/hls_360/test
+			#-vcodec libx264 -vprofile baseline -g 10 -vf scale=480:-2 -acodec aac -ar 44100 -ac 1 -f flv rtmp://localhost/hls_480/test
+			#-vcodec libx264 -vprofile baseline -g 10 -vf scale=720:-2 -acodec aac -ar 44100 -ac 1 -f flv rtmp://localhost/hls_720/test
+			#-vcodec libx264 -vprofile baseline -g 10 -vf scale=1080:-2 -acodec aac -ar 44100 -ac 1 -f flv rtmp://localhost/hls_1080/test;
+		}
+
+#		application hls {
+#			live on;
+                  #hls on;
+                   #hls_path /tmp/hls/;
+                    #hls_fragment 2s;
+                     #hls_playlist_length 60s;
+                }
+#		application hls_240 {
+#			live on;
+#			hls on;
+#			hls_path /tmp/hls_240/;
+#			hls_fragment 5s;
+#		}
+#
+#		application hls_360 {
+#			live on;
+#			hls on;
+#			hls_path /tmp/hls_360/;
+#			hls_fragment 5s;
+#		}
+#
+#		application hls_480 {
+#			live on;
+#			hls on;
+#			hls_path /tmp/hls_480/;
+#			hls_fragment 5s;
+#		}
+#
+#		application hls_720 {
+#			live on;
+#			hls on;
+#			hls_path /tmp/hls_720/;
+#			hls_fragment 5s;
+#		}
+#
+#		application hls_1080 {
+#			live on;
+#			hls on;
+#			hls_path /tmp/hls_1080/;
+#			hls_fragment 5s;
+#		}
+        }
+}
+
+#mail {
+#	# See sample authentication script at:
+#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
+# 
+#	# auth_http localhost/auth.php;
+#	# pop3_capabilities "TOP" "USER";
+#	# imap_capabilities "IMAP4rev1" "UIDPLUS";
+# 
+#	server {
+#		listen     localhost:110;
+#		protocol   pop3;
+#		proxy      on;
+#	}
+# 
+#	server {
+#		listen     localhost:143;
+#		protocol   imap;
+#		proxy      on;
+#	}
+#}

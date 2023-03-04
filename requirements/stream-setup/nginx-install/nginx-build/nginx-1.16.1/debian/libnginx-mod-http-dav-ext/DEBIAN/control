@@ -1,0 +1,15 @@
+Package: libnginx-mod-http-dav-ext
+Source: nginx
+Version: 1.16.1-0+bionic1
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 64
+Depends: nginx-common (= 1.16.1-0+bionic1), libc6 (>= 2.14), libexpat1 (>= 2.0.1)
+Section: httpd
+Priority: optional
+Homepage: http://nginx.net
+Description: WebDAV missing commands support for Nginx
+ WebDAV Ext module complements the Nginx WebDAV module to provide a full
+ WebDAV support.
+ .
+ WebDAV Ext provides the missing PROPFIND & OPTIONS methods.

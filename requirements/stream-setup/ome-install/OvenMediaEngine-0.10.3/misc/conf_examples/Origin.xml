@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Server version="6">
+	<Name>OvenMediaEngine</Name>
+	<!-- Host type (origin/edge) -->
+	<Type>origin</Type>
+	<!-- Specify IP address to bind (* means all IPs) -->
+	<IP>*</IP>
+
+	<!-- Settings for the ports to bind -->
+	<Bind>
+		<Providers>
+			<RTMP>
+				<Port>${env:OME_RTMP_PROV_PORT:1935}</Port>
+			</RTMP>
+		</Providers>
+
+		<Publishers>
+            <!-- The OVT is protocol for ORIGIN-EDGE -->
+			<OVT>
+				<Port>${env:OME_ORIGIN_PORT:9000}</Port>
+			</OVT>
+			<HLS>
+				<Port>${env:OME_HLS_STREAM_PORT:8080}</Port>
+				<!-- If you want to use TLS, specify the TLS port -->
+				<!-- <TLSPort>443</TLSPort> -->
+			</HLS>
+			<DASH>
+				<Port>${env:OME_DASH_STREAM_PORT:8080}</Port>
+				<!-- If you want to use TLS, specify the TLS port -->
+				<!-- <TLSPort>443</TLSPort> -->
+			</DASH>
+			<WebRTC>
+				<Signalling>
+					<Port>${env:OME_SIGNALLING_PORT:3333}</Port>
+					<!-- If you want to use TLS, specify the TLS port -->
+					<!-- <TLSPort>3334</TLSPort> -->
+				</Signalling>
+				<IceCandidates>
+					<IceCandidate>${env:OME_ICE_CANDIDATES:*:10000-10005/udp}</IceCandidate>
+				</IceCandidates>
+			</WebRTC>
+		</Publishers>
+	</Bind>
+
+	<VirtualHosts>
+		<!--
+			You can include multiple XML files by doing the following:
+			<VirtualHost include="sites-enabled/*.xml" />
+		-->
+		<VirtualHost include="VHost*.xml" />
+		<VirtualHost>
+			<Name>default</Name>
+
+			<!-- Settings for multi domain and TLS -->
+			<Domain>
+                <Names>
+				<!-- Domain names
+					<Name>stream1.airensoft.com</Name>
+					<Name>stream2.airensoft.com</Name>
+					<Name>*.sub.airensoft.com</Name>
+				-->
+                    <Name>*</Name>
+                </Names>
+				<!--
+				<TLS>
+					<CertPath>path/to/file.crt</CertPath>
+					<KeyPath>path/to/file.key</KeyPath>
+					<ChainCertPath>path/to/file.crt</ChainCertPath>
+				</TLS>
+				-->
+			</Domain>
+
+			<!-- Settings for applications -->
+			<Applications>
+				<Application>
+					<Name>app</Name>
+					<!-- Application type (live/vod) -->
+					<Type>live</Type>
+                    <Encodes>
+                        <Encode>
+                            <Name>bypass</Name>
+                            <Audio>
+                                <Bypass>true</Bypass>
+                            </Audio>
+                            <Video>
+                                <Bypass>true</Bypass>
+                            </Video>
+                        </Encode>
+                        <Encode>
+                            <Name>opus</Name>
+                            <Audio>
+                                <Codec>opus</Codec>
+                                <Bitrate>${env:OME_AUDIO_BITRATE:128000}</Bitrate>
+                                <Samplerate>${env:OME_AUDIO_SAMPLERATE:48000}</Samplerate>
+                                <Channel>${env:OME_AUDIO_CHANNEL:2}</Channel>
+                            </Audio>
+                        </Encode>
+                    </Encodes>
+					<Streams>
+						<Stream>
+							<Name>${OriginStreamName}_o</Name>
+							<Profiles>
+								<Profile>bypass</Profile>
+								<Profile>opus</Profile>
+							</Profiles>
+						</Stream>
+					</Streams>
+					<Providers>
+						<OVT />
+						<RTMP />
+						<RTSPPull />
+					</Providers>
+					<Publishers>
+						<ThreadCount>4</ThreadCount>
+						<OVT />
+						<WebRTC>
+							<Timeout>30000</Timeout>
+						</WebRTC>
+						<HLS>
+							<SegmentDuration>5</SegmentDuration>
+							<SegmentCount>3</SegmentCount>
+							<CrossDomain>
+								<Url>*</Url>
+							</CrossDomain>
+						</HLS>
+						<DASH>
+							<SegmentDuration>5</SegmentDuration>
+							<SegmentCount>3</SegmentCount>
+							<CrossDomain>
+								<Url>*</Url>
+							</CrossDomain>
+						</DASH>
+						<LLDASH>
+							<SegmentDuration>5</SegmentDuration>
+							<CrossDomain>
+								<Url>*</Url>
+							</CrossDomain>
+						</LLDASH>
+					</Publishers>
+				</Application>
+			</Applications>
+		</VirtualHost>
+	</VirtualHosts>
+</Server>

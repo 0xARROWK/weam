@@ -1,0 +1,13 @@
+Package: libnginx-mod-mail-dbgsym
+Package-Type: ddeb
+Source: nginx
+Version: 1.16.1-0+bionic1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 184
+Depends: libnginx-mod-mail (= 1.16.1-0+bionic1)
+Section: debug
+Priority: optional
+Description: debug symbols for libnginx-mod-mail
+Build-Ids: 69cf4d6a74935bb7e75752eb4dc918e657ef8613

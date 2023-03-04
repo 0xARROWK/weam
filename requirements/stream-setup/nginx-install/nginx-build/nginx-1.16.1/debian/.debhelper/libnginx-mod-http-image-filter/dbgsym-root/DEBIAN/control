@@ -1,0 +1,13 @@
+Package: libnginx-mod-http-image-filter-dbgsym
+Package-Type: ddeb
+Source: nginx
+Version: 1.16.1-0+bionic1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 64
+Depends: libnginx-mod-http-image-filter (= 1.16.1-0+bionic1)
+Section: debug
+Priority: optional
+Description: debug symbols for libnginx-mod-http-image-filter
+Build-Ids: 8cb7c915bf75ddf39b97c9cd507d7f7245623ab6

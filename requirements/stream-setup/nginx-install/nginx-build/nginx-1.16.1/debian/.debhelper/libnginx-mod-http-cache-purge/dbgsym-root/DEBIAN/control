@@ -1,0 +1,13 @@
+Package: libnginx-mod-http-cache-purge-dbgsym
+Package-Type: ddeb
+Source: nginx
+Version: 1.16.1-0+bionic1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@lists.alioth.debian.org>
+Installed-Size: 61
+Depends: libnginx-mod-http-cache-purge (= 1.16.1-0+bionic1)
+Section: debug
+Priority: optional
+Description: debug symbols for libnginx-mod-http-cache-purge
+Build-Ids: 0e113b34aa9b3a300f3d54620054d82faed9abb0

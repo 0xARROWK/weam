@@ -1,0 +1,6 @@
+316a9a2c96f26c744b5e26b6ca2651be  usr/lib/nginx/modules/ngx_rtmp_module.so
+ef43059940d2bbea5e9cd1276215072a  usr/share/doc/libnginx-mod-rtmp/README.md.gz
+78c79b4aee60c9fe9d233f29d58e7f26  usr/share/doc/libnginx-mod-rtmp/changelog.Debian.gz
+a3ca7af9f57003b84279a9112d5d8523  usr/share/doc/libnginx-mod-rtmp/copyright
+d768a5b0156edc568ec63c3c26410f22  usr/share/doc/libnginx-mod-rtmp/examples/stat.xsl.gz
+b7898aa45dfac4377004ccd9493d4ac4  usr/share/nginx/modules-available/mod-rtmp.conf

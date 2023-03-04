@@ -1,0 +1,7 @@
+a6e3a7999fd9e2d411f18229d738c0b0  usr/lib/nginx/modules/ngx_http_perl_module.so
+743671c5c0408fd7760a0fa606e36443  usr/lib/x86_64-linux-gnu/perl5/5.26/auto/nginx/nginx.so
+f494824388272d1e828c193f6cb16933  usr/lib/x86_64-linux-gnu/perl5/5.26/nginx.pm
+78c79b4aee60c9fe9d233f29d58e7f26  usr/share/doc/libnginx-mod-http-perl/changelog.Debian.gz
+a3ca7af9f57003b84279a9112d5d8523  usr/share/doc/libnginx-mod-http-perl/copyright
+183a0f824777a623403d067db23fe1cd  usr/share/lintian/overrides/libnginx-mod-http-perl
+a639cb11df43c940fca93bf921e19267  usr/share/nginx/modules-available/mod-http-perl.conf

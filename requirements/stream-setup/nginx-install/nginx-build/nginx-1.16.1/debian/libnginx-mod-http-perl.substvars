@@ -1,0 +1,4 @@
+misc:Depends=nginx-common (= ${source:Version})
+perl:Depends=perl (>= 5.26.1-6ubuntu0.3), perlapi-5.26.1
+shlibs:Depends=libc6 (>= 2.14), libperl5.26 (>= 5.26.0~rc1)
+misc:Pre-Depends=

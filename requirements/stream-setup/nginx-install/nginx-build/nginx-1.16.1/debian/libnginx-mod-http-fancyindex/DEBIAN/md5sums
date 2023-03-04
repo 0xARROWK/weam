@@ -1,0 +1,4 @@
+88b3ebad822c8b6033255823efd817df  usr/lib/nginx/modules/ngx_http_fancyindex_module.so
+78c79b4aee60c9fe9d233f29d58e7f26  usr/share/doc/libnginx-mod-http-fancyindex/changelog.Debian.gz
+a3ca7af9f57003b84279a9112d5d8523  usr/share/doc/libnginx-mod-http-fancyindex/copyright
+27ff125242102e1a8146cecb98770aba  usr/share/nginx/modules-available/mod-http-fancyindex.conf
